@@ -14,6 +14,13 @@
     <title>Document</title>
 </head>
 
+<script>
+
+    var form = document.getElementById('form');
+    function handleForm(event) { event.preventDefault(); }
+    form.addEventListener('submit', handleForm);
+</script>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
@@ -36,7 +43,7 @@
 
 
     <div class="container resize">
-        <form action="https://eventreminder.herokuapp.com/Submit" method="GET" class="forms">
+        <form id="form" action="https://eventreminder.herokuapp.com/Submit" method="GET" class="forms">
             <div class="form-group">
                 <input type="text" name="userName" class="form-control" id="" aria-describedby="userName"
                     placeholder="Enter Your Name" required>
